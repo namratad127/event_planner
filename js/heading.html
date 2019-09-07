@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+var colorarray=['red','blue','green','yellow','balck'];
+var i=0;
+function changecolor()
+{
+ document.getElementById('text').style.color=colorarray[i];
+ i++;
+ if(i==colorarray.length)
+ i=0;
+ setTimeout('changecolor()',1000);
+}
+
+</script>
+</head>
+<body onload='changecolor()'>
+<h1 id='text'>HELLO WORLD</H1>
+</body>
+</html>
+  

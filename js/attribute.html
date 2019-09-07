@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function demo()
+{
+ var a=document.getElementById('c1').checked
+ if(a==true)
+ {
+  document.getElementById('t1').type='text'
+ }
+else
+ {
+  document.getElementById('t1').type='password'
+ }
+}
+</script>
+</head>
+<body>
+<input type='password' id='t1'/>
+<input type='checkbox' id='c1' onchange="demo()"/>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<script>
+var colorarray=['red','blue','green','yellow'];
+var i=0
+function abc()
+{
+var r,c,tr,s;
+tr=5;
+for(r=1;r<=tr;r++)
+{
+  for(s=1;s<=tr-r;s++)
+  {
+    p1.innerHTML+="&nbsp;&nbsp";
+  }
+  for(c=1;c<=(r*2-1);c++)
+  {
+    p1.innerHTML+="<span style='color:"+colorarray[i]+";'>*</span>";
+	i++;
+	if(i==colorarray.length)
+	i=0
+  }
+  p1.innerHTML+="<br/>"
+}
+}
+</script>
+</head>
+<body>
+<button onclick='abc()'>click here</button>
+<p id='p1'> </p>
+</body>
+</html>
+  

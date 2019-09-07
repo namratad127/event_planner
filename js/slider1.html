@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+var colorarray=['red','blue','green','yellow','balck'];
+var i=0;
+function changecolor()
+{
+ document.getElementById('box1').style.backgroundColor=colorarray[i];
+ i++;
+ if(i==colorarray.length)
+ i=0;
+ setTimeout('changecolor()',1000);
+}
+
+</script>
+</head>
+<body onload='changecolor()'>
+<div id='box1' style='width:300px;height:300px;background-color:red;'/></div>
+</body>
+</html>
+  

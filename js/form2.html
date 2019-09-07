@@ -1,0 +1,145 @@
+<html>
+<head>
+<script>
+function validatename()
+{
+   var a=document.getElementById('t1');
+   if(a.value.match(/^[A-Za-z\s]+$/))
+   {
+      a.style.borderColor='green';
+	  return true;
+   }
+   else
+   {
+      a.style.borderColor='red';
+	  return false;
+   }
+}
+
+function validateemail()
+{
+   var a=document.getElementById('t2');
+   if(a.value.match(/^[A-Za-z.@0-9]+$/))
+   {
+      a.style.borderColor='green';
+	  return true;
+   }
+   else
+   {
+      a.style.borderColor='red';
+	  return false;
+   }
+}
+
+function validatepassword()
+{
+   var a=document.getElementById('t3');
+   var len=a.value.length;
+   if(a.value.match && len==8)
+   {
+      a.style.borderColor='green';
+	  return true;
+   }
+   else
+   {
+      a.style.borderColor='red';
+	  return false;
+   }
+}
+
+function validatemobile()
+{
+   var a=document.getElementById('t4');
+   var len=a.value.length;
+   if(a.value.match(/^[0-9]+$/) && len==10)
+   {
+      a.style.borderColor='green';
+	  return true;
+   }
+   else
+   {
+      a.style.borderColor='red';
+	  return false;
+   }
+}
+
+function validatepincode()
+{
+   var a=document.getElementById('t3');
+   var len=a.value.length;
+   if(a.value.match(/^[0-9]+$/) && len==6)
+   {
+      a.style.borderColor='green';
+	  return true;
+   }
+   else
+   {
+      a.style.borderColor='red';
+	  return false;
+   }
+}
+
+
+function formvalidation()
+{
+   var status=true;
+   if(validatename()==false)
+   {
+      status=false;
+   }
+   
+   if(validateemail()==false)
+   {
+      status=false;
+   }
+   
+   if(validatepassword()==false)
+   {
+      status=false;
+   }
+   
+   if(validatemobile()==false)
+   {
+      status=false;
+   }
+   
+   if(validatepincode()==false)
+   {
+      status=false;
+   }
+   
+   return status;
+}
+</script>
+</head>
+<body>
+<form onsubmit='return formvalidation()'>
+Name
+<input type="text" id="t1" required/>
+<br/><br/>
+E-mail
+<input type="email" id="t2" required/>
+<br/><br/>
+Password
+<input type="password" id="t3" maxlength="8" required/>
+<br/><br/>
+Mobile
+<input type="number" id="t4" maxlength="10" required/>
+<br/><br/>
+City
+<select>
+<option>select city</option>
+<option>KANPUR</option>
+<option>LUCKNOW</option>
+<option>VARANASI</option>
+<option>PRAYAGRAJ</option>
+<option>DELHI</option>
+</select>
+<br/><br/>
+Pincode
+<input type="number" id="t6" maxlength="6" required/>
+<br/><br/>
+<button>Submit</button>
+</form>
+</body>
+</html>

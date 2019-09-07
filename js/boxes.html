@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+.box{
+width:50px;
+height:50px;
+background-color:red;
+margin:5px;
+float:left;
+}
+</style>
+<script>
+var colora=["red","yellow","blue","green","pink","gray"];
+var z=0;
+function abc()
+{
+var a=document.getElementById('t1').value;
+for (var i=1;i<=a;i++)
+{
+  document.getElementById("result").innerHTML+="<div class='box' style='background-color:"+colora[z]+";'></div>";
+  z++;
+  if(z==colora.length)
+  z=0;
+}
+}
+
+</script>
+</head>
+<body>
+enter a number:
+<input type='text' id='t1'/>
+<button onclick='abc()'>click here</button>
+<div id='result'></div>
+</body>
+</html>

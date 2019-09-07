@@ -1,0 +1,20 @@
+<html>
+<head>
+<script>
+var imagearray=['pic1.JPG','pic2.JPG','pic3.JPG','pic4.JPG'];
+var i=0
+function slider()
+{
+  document.getElementById('img1').src=imagearray[i];
+  i++;
+  if(i==imagearray.length)
+  i=0;
+  setTimeout('slider()',2000);
+}
+</script>
+</head>
+<body onload='slider()'>
+<img id='img1' src="pic1.JPG" style='width:900px;height=400px;'/>
+</body>
+</html>
+  
